@@ -13,4 +13,7 @@ with audio_file as source:
 
 with open("test.txt", mode = "w")as file:
 	file.write("Recognized text: ")
-	file.write("/n", result)
+	
+	#why? only one line can be written at a time, we cannot write two things simultaneously in the same .write() function.
+	file.write("/n")
+	file.write(result)
