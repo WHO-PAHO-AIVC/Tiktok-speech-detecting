@@ -23,7 +23,9 @@ Command: `git clone --branch bug_fixes https://github.com/WHO-PAHO-AIVC/Tiktok-s
     | configs.json
     | Speach detecting from video to txt.py
 ```
+Make sure the repo is cloned in the folder where the mp4 videos are stored. In the above case it is cloned into `.\Desktop\project`
 
+Change your working directory in Command Line/Terminal to `.\Desktop\project` before cloning the repository.
 
 ### Files
 
@@ -39,9 +41,12 @@ Command: `git clone --branch bug_fixes https://github.com/WHO-PAHO-AIVC/Tiktok-s
 
 ```
 {
-  "mp4_data_path": "C:\Users\John\Desktop\project_files\mp4_videos",
-  "save_path_wav": "C:\Users\John\Desktop\project_files\wav_files",
-  "save_path_txt": "C:\Users\John\Desktop\project_files\text_files"
+  "mp4_data_path": "C:\Users\John\Desktop\project\mp4_videos",
+  "save_path_wav": "C:\Users\John\Desktop\project\wav_files",
+  "save_path_txt": "C:\Users\John\Desktop\project\text_files"
 }
 ```
 
+Once changes have been made in `configs.json`, you can run the python script
+
+Command: `python3 Speach detecting from video to txt.py`
