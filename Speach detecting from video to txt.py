@@ -41,6 +41,8 @@ def speech_detecting_from_wav(input_audio_file, path_input_audio_file, save_path
 
 
 if __name__ == '__main__':
+    
+    # The code loads the configs.json file to get the directories that must be referred to
     f = open("configs.json")
     configs = json.load(f)
 
@@ -48,18 +50,21 @@ if __name__ == '__main__':
     save_path_txt = configs["save_path_txt"]
     save_path_wav = configs["save_path_wav"]
 
+    # If the path (folder) to store wav files are not there, it will be made
     if not os.path.exists(save_path_wav):
         os.mkdir(save_path_wav)
-
+    # If the path (folder) to store txt files are not there, it will be made
     if not os.path.exists(save_path_txt):
         os.mkdir(save_path_txt)
 
+    # this will filter out the mp4 files and pprocess them- convert them to wav files
     for input_video in os.listdir(mp4_data_path):
         if input_video.split(".mp4")[-1] == "":
             transfer_mp4_to_wav(input_video, os.path.join(mp4_data_path, input_video), save_path_wav)
-
+    
     print("Wav files saved in: ", save_path_wav)
 
+    # once the wav files are generated and stored, the code runs the wav to text conversion and stores it.
     for input_audio_file in os.listdir(save_path_wav):
         if input_audio_file.split(".wav")[-1] == "":
             speech_detecting_from_wav(input_audio_file, os.path.join(save_path_wav, input_audio_file), save_path_txt)
