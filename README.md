@@ -1,6 +1,30 @@
 # Tiktok-speech-detecting
 ## Code Documentation - Bug Fixes
 
+1. Clone the bug fixes branch of this repository
+
+Command: `git clone --branch bug_fixes https://github.com/WHO-PAHO-AIVC/Tiktok-speech-detecting.git`
+
+### Folder Structure
+
+```
+| Desktop
+  | project
+    | mp4_videos
+      | video1.mp4
+      | video2.mp4
+      ...
+    | text_files
+      | video1.txt
+      | video2.txt
+    | wav_files
+      | video1.wav
+      | video2.wav
+    | configs.json
+    | Speach detecting from video to txt.py
+```
+
+
 ### Files
 
 `configs.json`: before running the code on YOUR Mac/PC, change the directories in this file
@@ -17,8 +41,7 @@
 {
   "mp4_data_path": "C:\Users\John\Desktop\project_files\mp4_videos",
   "save_path_wav": "C:\Users\John\Desktop\project_files\wav_files",
-  "save_path_txt": "C:\Users\John\Desktop\project_files\text"
+  "save_path_txt": "C:\Users\John\Desktop\project_files\text_files"
 }
-
 ```
 
